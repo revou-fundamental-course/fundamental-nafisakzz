@@ -4,114 +4,146 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio nafisa</title>
-    <!-- fontawesome -->
-
-    <link ref="stylesheet" <!-- My CSS -- />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- Navbar start -->
-     <section>
-      <div class="home package">
+    <!-- Navigasi Bar -->
     <header>
-          <a href="#" class="logo">
-            <img src="./img/logo revou.png" alt="profile" width="50" />
-          </a>
-        <UL> 
-         <li<a href="#">Home</a></li>
-          <li<a href="#"> ABOUT </a></li>
-          <li<a href="#">Portfolio</a></li>
-          <li<a href="#">Contact</a></li>
-        </UL>
+      <nav class="navbar-container">
+        <img src="assets/logo-revou.png" class="logo" />
+        <!--  Logo icon -->
+
+        <div>
+          <ul class="nav-item-container">
+            <li class="nav-item">
+              <a href="#" class="nav-a">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about-us" class="nav-a">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="#message-us" class="nav-a">Message Us </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
-    <!-- Navbar end -->
+    <!-- Ini Navigasi Bar Selesai -->
 
-    <main>
-      <!-- content start -->
-      <div class="content"> 
-        <h1>Hi,I am NAFISA KAMILA</h1>
-        <p> I am prospective infomation engineering</p>
+    <hr />
+
+    <!-- Welcoming speech -->
+    <section class="content">
+      <h2 class="welcome-title">
+        Hi <span id="input-nama" class="input-nama"></span> , I am NAFISA KAMILA
+      </h2>
+      <p>I am prospective infomation engineering</p>
+    </section>
+
+    <!-- Banner -->
+    <section class="slider">
+      <main class="slides-container">
+        <div class="slide">
+          <img src="assets/foto-formal-nafisa.jpg" alt="slide 1" />
         </div>
-
-        <div class="img">
-          <img src="img/foto formal nafisa.jpg" alt="" />
-
+        <div class="slide">
+          <img src="assets/foto-formal-napnap2.jpg" alt="slide 2" />
+          <!-- Masukkan foto yang di inginkan di folder assets-->
         </div>
-        <ul class="logo"> 
-          <li> <a href=" https://www.instagram.com/nafisakml_/" target="_blank"
-            ><i class="fa-brands fa-instagram"></i
-          ></a> </li> 
+        <div class="slide">
+          <img src="assets/foto-formal-napnap3.jpg" alt="slide 3" />
+          <!-- Masukkan foto yang di inginkan di folder assets-->
+        </div>
+      </main>
+    </section>
+    <!-- Banner End -->
 
-          <li><a
-            href=" https://www.linkedin.com/in/nafisakamila1407/"
-            target="_blank"
+    <hr />
+
+    <!-- Welcoming speech End -->
+
+    <!-- about us -->
+    <section class="about-background" name="about-us" id="about-us">
+      <header>
+        <h2>About Us</h2>
+      </header>
+
+      <main class="about-container">
+        <div>
+          <div class="about-item"></div>
+          <img src="assets/logo-linkedin.jpg" id="linkedin-logo" />
+          <a href="https://www.linkedin.com/in/nafisakamila1407/" class="about"
+            >Linkedin</a
           >
-            <i class="fa-brands fa-linkedin"></i>
-          </a></li> 
-        </ul>
-        
-        <div class="NOTES"></div>
-
         </div>
-      
-      </section>
-      <!-- content  end -->
 
-      <!-- Our start -->
-      <section class="our">
         <div>
-          <h1>about</h1>
+          <div class="about-item"></div>
+          <img src="assets/logo-ig.jpg" id="instagram-logo" />
+          <a href="https://www.instagram.com/nafisakml_" class="about"
+            >Instagram</a
+          >
         </div>
+      </main>
+    </section>
+    <!-- about us End -->
+
+    <hr />
+
+    <!-- Message Us-->
+    <main class="message-container" id="message-us">
+      <section class="form-container">
+        <h2>Message Us</h2>
+        <form id="message-form" class="form-group">
+          <label for="nama">Nama:</label>
+          <input type="text" id="nama" name="nama" /><br /><br />
+          <label for="tanggal-lahir">Tanggal Lahir:</label>
+          <input
+            type="date"
+            id="tanggal-lahir"
+            name="tanggal-lahir"
+          /><br /><br />
+          <label for="jenis-kelamin" id="jenis-kelamin">Jenis Kelamin:</label>
+          <input
+            type="radio"
+            id="laki-laki"
+            name="jenis-kelamin"
+            value="Laki-Laki"
+          />
+          <label for="laki-laki">Laki-Laki</label>
+          <input
+            type="radio"
+            id="perempuan"
+            name="jenis-kelamin"
+            value="Perempuan"
+          />
+          <label for="perempuan">Perempuan</label><br /><br />
+          <label for="pesan">Pesan:</label><br />
+          <textarea id="pesan" name="pesan" rows="4" cols="50"></textarea
+          ><br /><br />
+          <button type="button" onclick="submitForm()">Submit</button>
+        </form>
       </section>
-
-      <!-- Our end -->
-
-      <!-- Message start -->
-      <section class="message">
-        <div>
-          <h1>Message Us</h1>
-        </div>
-        <div class="form-data">
-          <div>
-            <form action="">
-              <label for="name">Nama:</label>
-              <input type="text" id="name" name="name" /><br />
-
-              <label for="born">Tanggal Lahir:</label>
-              <input type="date" id="born" name="born" /><br />
-
-              <label for="gender">Jenis Kelamin:</label>
-              <div>
-                <input type="radio" id="male" name="gender" value="male" />
-                <label for="male">Laki-laki</label>
-              </div>
-              <div>
-                <input type="radio" id="female" name="gender" value="female" />
-                <label for="female">Perempuan</label>
-              </div>
-
-              <label for="message">Pesan:</label><br />
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                cols="40"
-              ></textarea
-              ><br />
-
-              <button>Submit</button>
-            </form>
-          </div>
-          <div>BUAT HASIL KE DUA</div>
-        </div>
+      <section class="output-container" id="output-container">
+        <br />
+        <p id="current-time"></p>
+        <br />
+        <p id="output-nama"></p>
+        <p id="output-tanggal-lahir"></p>
+        <p id="output-jenis-kelamin"></p>
+        <p id="output-pesan"></p>
       </section>
-      <!-- Message end -->
     </main>
+    <!-- Message Us end-->
+
+    <hr />
 
     <!-- Footer start -->
     <footer>
-      <p>Created by Nafisa</p>
+      <p class="footer">Created by Nafisa</p>
     </footer>
     <!-- Footer start -->
+
+    <script src="js/script.js"></script>
   </body>
 </html>
